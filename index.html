@@ -10,23 +10,53 @@
 <head>
     <meta charset="UTF-8">
     <title>Word guess Game</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script type="text/javascript" src="assets/javascript/game.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC" rel="stylesheet">
 </head>
 
 <body>
-    <h1>The Psychic Game</h1>
-    <h2>Instructions: guess what letter I'm thinking of by typing it on your keyboard, make sure capslock is off</h2>
-    
-    <p><span id="currentWordtxt">test</span></p>
-    <div class="gameWindow">
-        <p>Wins: <span id="wintxt">0</span></p>
-        <p>losses: <span id="losstxt">0</span></p>
-        <p>Guesses left: <span id="lifetxt">6</span></p>
-        <p>Your Guesses so far: <span id="guessedtxt"></span></p>
-        <p>The Word: <span id="wordtxt"></span></p>
-    </div>
 
+    <div class="mainContainer">
+        <audio id="bgm" loop="true" src="assets/audio/tLoZ.mp3"></audio>
+        <audio id="sfx" autoplay src="#"></audio>
+        <audio id="error" src="assets/audio/error.mp3"></audio>
+        <h1>The Legend of Zelda Themed <br>Word Guess Game</h1>
+        <h2>Instructions: </h2>
+        <p>Play a game of hang man, by guessing the letters in the hidden word. The words are all related to The Legend
+            of Zelda. Casing does not matter and punctuations are dropped. </p>
+
+        <div class="gameBorder">
+            <div id="gameWindow">
+                <div id="gameContent">
+                    <p id="continue">Press any key to start</p>
+                    <p>Wins: <span id="wintxt">0</span></p>
+                    <p>Losses: <span id="losstxt">0</span></p>
+                    <p>Life: </p>
+                    <div class="heart" id="heart1"></div>
+                    <div class="heart" id="heart2"></div>
+                    <div class="heart" id="heart3"></div>
+                    <div class="heart" id="heart4"></div>
+                    <div class="heart" id="heart5"></div>
+                    <div class="heart" id="heart6"></div>
+                    <p>The Word:</p>
+                    <span id="wordtxt"></span>
+                    <p id="guess">Your Guesses so far: <span id="guessedtxt"></span></p>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="imgContainer">
+            <img id="banner" src="assets/images/tLoZ.JPG">
+        </div>
+        <p class="bottomText">This page was created for the javascript homework of the UPennLPS Coding Boot Camp. It is
+            intended for
+            educational purposes only. I do not own the artworks and audios present on this page and their credits are
+            due
+            to The Legend of Zelda series from Nintendo </p>
+    </div>
 </body>
 
 </html>

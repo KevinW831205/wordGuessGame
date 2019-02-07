@@ -1,10 +1,160 @@
 /*
-
-
-
-
+UpennLPS HW3 Word Guess Game javascript
+Author: Kevin Wang
+Date due: 2019/02/09 
 */
 
-.gameWindow{
-    display:visible;
+h1{
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
+
+h2{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+p{
+    font-size:20px;
+}
+
+span{
+    font-size: 20px;
+}
+
+body{
+    background-color:black;
+}
+
+#bgm{
+    float: initial;
+}
+
+.mainContainer{
+    background-color:#E3C996;
+    width: 960px;
+    height: 100%;
+    margin: auto;
+    padding: 20px 20px 50px 20px;
+    font-family: 'Noto Sans SC', sans-serif;
+}
+
+.imgContainer{
+    max-height:350px;
+    width:auto;
+    display:block;
+    margin-bottom: 30px;
+}
+
+#banner{
+    margin:auto;
+    max-height:350px;
+    width:auto;
+    display:block;
+    
+}
+
+.gameBorder{
+    border-style:inset;
+    border-width: 10px;
+    margin :30px;
+}
+
+#gameWindow{
+    
+    position: relative;
+    padding: 10px 10px 10px 20px;
+    background-color: black;
+}
+
+#gameContent{
+    margin:20px;
+    color:white;
+    visibility:hidden;
+}
+
+#wordtxt{
+    letter-spacing: 2px;
+}
+
+#continue{
+    visibility: visible;
+    position: absolute;
+    text-align:center;
+    padding:10px;
+    height: 80px;
+    width: 400px;
+    left: 50%;
+    margin-left: -210px;
+    top: 50%;
+    margin-top: -50px;  
+    z-index:1;
+    font-size: 24px;
+    color: black;
+    background-color: white;
+    animation:fadeinout 4s linear forwards;
+    animation-iteration-count: infinite;
+    opacity:0.5;
+    font-family: 'Noto Sans SC', sans-serif;
+}
+
+.heart {    
+    background-color: red;
+    height: 25px;
+    width: 25px;
+    transform: rotate(-45deg);
+    position: relative;
+    top:0px;
+    left:40px;
+    margin-left:15px;
+    display:inline-block;
+    animation-name:beat;
+    animation-duration:4s;
+    animation-iteration-count: infinite;
+  }
+  
+  .heart::after {
+    background-color:inherit;
+    content: "";
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left:12.5px;
+
+  }
+  .heart::before {
+    content:"" ;
+    background-color:inherit;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top:-12.5px;    
+  }
+
+  #guess{
+    margin-top: 10px
+  }
+
+  @keyframes beat {
+    0% {
+        transform: scale(1) rotate(-45deg);
+        }
+    50% {
+        transform: scale(0.8) rotate(-45deg);
+        } 
+    }
+
+    @keyframes fadeinout {
+        0% { opacity: 0.5; }
+        50% { opacity: 1; }
+        100% { opacity: 0.5; }
+      }
+
+    .bottomText{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
