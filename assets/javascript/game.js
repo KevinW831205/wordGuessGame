@@ -222,7 +222,6 @@ var game = {
         //The Game
         else {
             if (/^[a-z]+$/.test(userinput) || /^[A-Z]+$/.test(userinput)) {
-                //if (game.allLetter(userinput)) {  //trying to accept all letters /regular expression question on /^[A-Za-z]+$]/
                 userinput = userinput.toLowerCase();
                 if (game.checkRepeat(userinput)) {
                     document.getElementById("error").play();
